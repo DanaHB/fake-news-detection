@@ -60,6 +60,10 @@ user_input = st.text_area(
 )
 
 if st.button("Verify Content", type="primary"):
+    
+    # ⏱️ [تعديل] 1. هنا يبدأ حساب الوقت الإجمالي فوراً عند ضغط الزر
+    total_start_time = time.time()
+    
     if not user_input.strip():
         st.warning("⚠️ Input buffer is empty. Enter data to execute prediction pipeline.")
     elif classification_model is None:
@@ -79,7 +83,7 @@ if st.button("Verify Content", type="primary"):
             prediction = classification_model.predict(vectorized_text)[0]
             probabilities = classification_model.predict_proba(vectorized_text)[0]
             
-            # Stop timer immediately after model inference terminates
+            # Stop timer immediately after model inference terminates (وقت الموديل الصافي)
             inference_time = time.time() - start_time
             
             # Map prediction class to its exact confidence scale percentage
@@ -95,8 +99,12 @@ if st.button("Verify Content", type="primary"):
                 st.error("### 🔴 Classified as: FAKE NEWS")
                 st.metric(label="Misinformation Score (Confidence)", value=f"{confidence:.2f}%")
                 
+            # ⏱️ [تعديل] 2. هنا ينتهي حساب الوقت الإجمالي بعد رسم الواجهة وإظهار الميتريكس وكل شيء
+            total_execution_time = time.time() - total_start_time
+                
             # Log and display non-functional performance speeds to substantiate targets (<1s)
-            st.info(f"⚡ **System Response Time:** {inference_time:.4f} seconds (Target: < 1.0s)")
+            st.info(f"⚡ **Internal Inference Time (Model Only):** {inference_time:.4f} seconds")
+            st.success(f"🌐 **Total Execution Time (End-to-End):** {total_execution_time:.4f} seconds (Target: < 1.0s)")
 
 st.write("---")
 
