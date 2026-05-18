@@ -1,0 +1,34 @@
+2026-05-17 23:02:25,774 | INFO | Initializing Tahqiq System Architecture Pipeline...
+2026-05-17 23:02:25,775 | INFO | Downloading ISOT dataset...
+2026-05-17 23:02:53,166 | INFO | [ISOT Stage] Comparing Unigram vs Bigram representations dynamically...
+2026-05-17 23:03:53,334 | INFO | [ISOT Stage] Unigram CV F1: 0.9835 | Bigram CV F1: 0.9848
+2026-05-17 23:03:53,344 | INFO | [ISOT Stage] Dynamic Selection: Bigrams win!
+2026-05-17 23:04:00,097 | INFO | Best locked parameter C: {'C': 10}
+2026-05-17 23:04:06,291 | INFO | ISOT Test Results -> Accuracy: 0.9913, F1: 0.9920
+2026-05-17 23:04:06,295 | INFO | Downloading WELFake dataset...
+2026-05-17 23:07:49,086 | INFO | WELFake Baseline Results -> Accuracy: 0.8526, F1: 0.8327
+2026-05-17 23:07:49,736 | INFO | [Domain Adaptation Stage] Comparing Unigram vs Bigram representations dynamically...
+2026-05-17 23:09:33,738 | INFO | [Domain Adaptation Stage] Unigram CV F1: 0.9663 | Bigram CV F1: 0.9679
+2026-05-17 23:09:33,744 | INFO | [Domain Adaptation Stage] Dynamic Selection: Bigrams win!
+2026-05-17 23:09:41,356 | INFO | Best locked parameter C: {'C': 10}
+2026-05-17 23:11:01,800 | INFO | WELFake Adapted Test Results -> Accuracy: 0.9437, F1: 0.9414
+2026-05-17 23:11:01,813 | INFO | Pipeline execution finished successfully. Modules are fully locked.
+2026-05-17 23:16:02,751 | INFO | Initializing Tahqiq System Architecture Pipeline...
+2026-05-17 23:16:02,751 | INFO | Downloading ISOT dataset...
+2026-05-17 23:16:29,661 | INFO | [ISOT Stage] Comparing Unigram vs Bigram representations dynamically...
+2026-05-17 23:17:29,695 | INFO | [ISOT Stage] Unigram CV F1: 0.9835 | Bigram CV F1: 0.9848
+2026-05-17 23:17:29,703 | INFO | [ISOT Stage] Dynamic Selection: Bigrams win!
+2026-05-17 23:17:37,111 | INFO | Best locked parameter C: {'C': 10}
+2026-05-17 23:17:44,408 | INFO | ISOT Test Results -> Accuracy: 0.9913, F1: 0.9920
+2026-05-17 23:17:44,806 | INFO | Successfully saved artifact to baseline_tfidf.pkl
+2026-05-17 23:17:44,809 | INFO | Successfully saved artifact to baseline_model.pkl
+2026-05-17 23:17:44,810 | INFO | Downloading WELFake dataset...
+2026-05-17 23:19:50,162 | INFO | WELFake Baseline Results -> Accuracy: 0.8526, F1: 0.8327
+2026-05-17 23:19:50,628 | INFO | [Domain Adaptation Stage] Comparing Unigram vs Bigram representations dynamically...
+2026-05-17 23:21:24,942 | INFO | [Domain Adaptation Stage] Unigram CV F1: 0.9663 | Bigram CV F1: 0.9679
+2026-05-17 23:21:24,948 | INFO | [Domain Adaptation Stage] Dynamic Selection: Bigrams win!
+2026-05-17 23:21:32,303 | INFO | Best locked parameter C: {'C': 10}
+2026-05-17 23:22:20,280 | INFO | WELFake Adapted Test Results -> Accuracy: 0.9437, F1: 0.9414
+2026-05-17 23:22:20,578 | INFO | Successfully saved artifact to adapted_tfidf.pkl
+2026-05-17 23:22:20,580 | INFO | Successfully saved artifact to adapted_model.pkl
+2026-05-17 23:22:20,581 | INFO | Pipeline execution finished successfully. All models are securely saved.
