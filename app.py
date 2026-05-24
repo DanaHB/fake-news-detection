@@ -123,8 +123,8 @@ if st.button("Verify Content", type="primary"):
                 total_execution_time = time.time() - total_start_time
                     
                 # Log and display non-functional performance speeds to substantiate targets (<1s)
-                st.info(f"⚡ **Internal Inference Time (Model Only):** {inference_time:.4f} seconds")
-                st.success(f"🌐 **Total Execution Time (End-to-End):** {total_execution_time:.4f} seconds (Target: < 1.0s)")
+                #st.info(f"⚡ **Internal Inference Time (Model Only):** {inference_time:.4f} seconds")
+                #st.success(f"🌐 **Total Execution Time (End-to-End):** {total_execution_time:.4f} seconds (Target: < 1.0s)")
 
                 # ==========================================
                 # 🆕 2.5.1 MONITORING HOOK LOGGING TRIGGER
