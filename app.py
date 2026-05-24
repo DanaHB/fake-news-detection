@@ -74,7 +74,7 @@ user_input = st.text_area(
 
 if st.button("Verify Content", type="primary"):
     
-    # ⏱️ 1. هنا يبدأ حساب الوقت الإجمالي فوراً عند ضغط الزر
+    #  Start total execution timer
     total_start_time = time.time()
     
     if not user_input.strip():
@@ -119,7 +119,7 @@ if st.button("Verify Content", type="primary"):
                     st.metric(label="Misinformation Score (Confidence)", value=f"{confidence:.2f}%")
                     label_str = "FAKE"
                     
-                # ⏱️ 2. هنا ينتهي حساب الوقت الإجمالي بعد رسم الواجهة وإظهار الميتريكس وكل شيء
+                  # End total execution timer
                 total_execution_time = time.time() - total_start_time
                     
                 # Log and display non-functional performance speeds to substantiate targets (<1s)
