@@ -52,5 +52,5 @@ def run_test(text, runs):
 # Run experiments with different load scenarios:
 # 10 requests → Load test (low traffic simulation)
 # 50 requests → Stress test (medium load simulation)
-# 100 requests → Peak load test (high load simulation)
+# 100 requests → High stress scenario
 run_test("This is a fake news example", 10)
