@@ -101,7 +101,7 @@ if st.button("Verify Content", type="primary"):
                 prediction = classification_model.predict(vectorized_text)[0]
                 probabilities = classification_model.predict_proba(vectorized_text)[0]
                 
-                # Stop timer immediately after model inference terminates (وقت الموديل الصافي)
+                # Stop timer immediately after model inference terminates 
                 inference_time = time.time() - start_time
                 
                 # Map prediction class to its exact confidence scale percentage
