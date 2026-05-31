@@ -141,7 +141,7 @@ if st.button("Verify Content", type="primary"):
             except Exception as runtime_error:
                 # 🆕 Defensive Error Hook: Captures code issues without breaking the web page interface
                 total_execution_time = time.time() - total_start_time
-                st.error("An error occurred during text engineering analysis. Please check input formatting.")
+                st.error(f"❌ Analysis Error: {str(runtime_error)}")
                 logging.error(f"STATUS: Runtime_Error | ERROR_MSG: {str(runtime_error)} | TOTAL_LATENCY: {total_execution_time:.4f}s")
 
 st.write("---")
