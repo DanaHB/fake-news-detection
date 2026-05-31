@@ -3,6 +3,7 @@ import joblib
 import os
 import time
 import logging  # 🆕 Added for monitoring hooks
+from data_preprocessing import clean_text
 
 # ==========================================
 # 🆕 MONITORING LOGS CONFIGURATION
