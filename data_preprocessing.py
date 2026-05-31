@@ -2,10 +2,11 @@ import os
 import re
 import numpy as np
 import pandas as pd
-import kagglehub
+#import kagglehub
 from config import logger, RANDOM_STATE
 
 def load_isot_dataset():
+    import kagglehub
     """
     Downloads and prepares the baseline ISOT Fake News Dataset.
     Combines true and fake components and assigns binary labels (1=Real, 0=Fake).
